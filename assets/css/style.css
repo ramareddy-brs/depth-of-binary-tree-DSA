@@ -164,6 +164,27 @@ header p {
     color: #055BA6;
 
 }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #treeInput {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #result {
+    font-weight: bold;
+  }
+  
 
 /* Sticky footer styles
   -------------------------------------------------- */

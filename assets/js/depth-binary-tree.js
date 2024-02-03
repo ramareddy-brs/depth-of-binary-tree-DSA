@@ -1,24 +1,22 @@
-function TreeNode(val) {
-  this.val = val;
-  this.left = this.right = null;
+function calculateDepth() {
+  const treeInput = document.getElementById('treeInput').value;
+
+  const root = JSON.parse(treeInput);
+
+  // Call the function to calculate the maximum depth
+  const depth = maxDepth(root);
+
+  // Display the result
+  document.getElementById('result').innerText = 'Maximum Depth: ' + depth;
 }
 
 function maxDepth(root) {
-  if (root === null) {
-      return 0;
+  if (!root) {
+    return 0;
   }
 
-  let leftDepth = maxDepth(root.left);
-  let rightDepth = maxDepth(root.right);
-  
-  return Math.max(leftDepth, rightDepth) + 1;
+  const leftDepth = maxDepth(root.left);
+  const rightDepth = maxDepth(root.right);
+
+  return 1 + Math.max(leftDepth, rightDepth);
 }
-
-let root = new TreeNode(1);
-root.left = new TreeNode(9);
-root.right = new TreeNode(20);
-root.right.left = new TreeNode(15);
-root.right.right = new TreeNode(7);
-
-let result = maxDepth(root);
-console.log(result); 
